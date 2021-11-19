@@ -3,7 +3,6 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/tylertierney"
   },
-  "author": "Tyler Tierney",
   "version": "1.0.2",
   "description": "A small card component used to display a project in a web dev portfolio.",
   "scripts": {
