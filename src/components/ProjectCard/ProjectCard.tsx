@@ -97,6 +97,7 @@ const SmallProjectCard: React.FC<SmallProjectProps> = ({
               fontWeight: "bold",
               paddingLeft: "0.3rem",
               color: project.color,
+              userSelect: "none",
             }}
           >
             {project.title}
