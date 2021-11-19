@@ -10,23 +10,28 @@ export interface SiteBtnProps {
   text: string;
   link: string;
   color: string;
-  textColor: string;
+  isDarkMode: Boolean;
 }
 
 const SiteButton: React.FC<SiteBtnProps> = ({
   text,
   link,
   color,
-  textColor,
+  isDarkMode,
 }) => {
   const btnRef: any = useRef(null);
+
+  let textColor = "#696969";
+  if (isDarkMode) {
+    textColor = "#E1E1E1";
+  }
 
   useEffect(() => {
     if (btnRef.current) {
       btnRef.current.style.setProperty("--custom-color", color);
       btnRef.current.style.setProperty("--custom-text-color", textColor);
     }
-  }, []);
+  }, [isDarkMode]);
 
   return (
     <button
@@ -36,6 +41,9 @@ const SiteButton: React.FC<SiteBtnProps> = ({
         borderColor: color,
         transition: "0.3s ease-in-out",
         cursor: "pointer",
+        display: "flex",
+        alignItems: "center",
+        height: "90%",
       }}
     >
       <a

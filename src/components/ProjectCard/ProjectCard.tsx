@@ -21,9 +21,23 @@ export interface ProjectProps {
 
 export interface SmallProjectProps {
   project: ProjectProps;
+  isDarkMode: Boolean;
 }
 
-const SmallProjectCard: React.FC<SmallProjectProps> = ({ project }) => {
+const SmallProjectCard: React.FC<SmallProjectProps> = ({
+  project,
+  isDarkMode,
+}) => {
+  let borderColor = "#2e2e2e";
+  let backgroundColor = "white";
+  let textColor = "#696969";
+
+  if (isDarkMode) {
+    backgroundColor = "#2e2e2e";
+    borderColor = "white";
+    textColor = "#E1E1E1";
+  }
+
   return (
     // <div
     //   style={{
@@ -38,13 +52,16 @@ const SmallProjectCard: React.FC<SmallProjectProps> = ({ project }) => {
     // >
     <div
       style={{
-        border: "3px solid white",
+        border: "3px solid",
+        borderColor: borderColor,
+        backgroundColor: borderColor,
         height: "290px",
         width: "340px",
         borderRadius: "10px",
         overflow: "hidden",
         position: "relative",
         fontFamily: "inherit",
+        boxShadow: "4px 4px 10px 1px rgb(0, 0, 0, 0.15)",
       }}
       className="projectCard"
     >
@@ -59,7 +76,7 @@ const SmallProjectCard: React.FC<SmallProjectProps> = ({ project }) => {
       />
       <div
         style={{
-          backgroundColor: "white",
+          backgroundColor,
           width: "100%",
           height: "80%",
           borderTopLeftRadius: "10px",
@@ -88,7 +105,7 @@ const SmallProjectCard: React.FC<SmallProjectProps> = ({ project }) => {
             text="Live Site"
             link={project.hostedsite}
             color={project.color}
-            textColor="#696969"
+            isDarkMode={isDarkMode}
           />
         </div>
         <div
@@ -96,7 +113,7 @@ const SmallProjectCard: React.FC<SmallProjectProps> = ({ project }) => {
           style={{
             padding: "0rem 1rem",
             height: "80%",
-            color: "#696969",
+            color: textColor,
             userSelect: "none",
           }}
         >

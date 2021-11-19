@@ -18,5 +18,5 @@ Primary.args = {
   text: "Live Site",
   link: "https://google.com",
   color: "#eb4034",
-  textColor: "#696969",
+  isDarkMode: true,
 };

@@ -88,10 +88,12 @@ export const ApplicationTracker = Template.bind({});
 
 ApplicationTracker.args = {
   project: sampleProj,
+  isDarkMode: false,
 };
 
 export const MovieWorm = Template.bind({});
 
 MovieWorm.args = {
   project: sampleProj2,
+  isDarkMode: true,
 };
