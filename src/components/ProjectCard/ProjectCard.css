@@ -2,12 +2,21 @@
   box-sizing: border-box;
 }
 
-.flexColumn {
-  display: flex;
-  direction: column;
+:root {
+  --custom-color: #213a70;
+  --custom-text-color: #696969;
 }
 
-.flexRow {
+.flex {
+  display: flex;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexRowSpaceBetween {
   display: flex;
   justify-content: space-between;
   align-items: center;

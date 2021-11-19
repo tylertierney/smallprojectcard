@@ -4,6 +4,8 @@ import { useRef, useEffect } from "react";
 
 import "./SiteButton.css";
 
+import { BsArrowUpRight } from "react-icons/bs";
+
 export interface SiteBtnProps {
   text: string;
   link: string;
@@ -21,19 +23,10 @@ const SiteButton: React.FC<SiteBtnProps> = ({
 
   useEffect(() => {
     if (btnRef.current) {
-      console.log(btnRef.current.classList);
+      btnRef.current.style.setProperty("--custom-color", color);
+      btnRef.current.style.setProperty("--custom-text-color", textColor);
     }
   }, []);
-
-  const addColorsOnHover = (e: any) => {
-    e.target.style.backgroundColor = color;
-    e.target.style.color = "white";
-  };
-
-  const removeColors = (e: any) => {
-    e.target.style.backgroundColor = "transparent";
-    e.target.style.color = textColor;
-  };
 
   return (
     <button
@@ -41,20 +34,22 @@ const SiteButton: React.FC<SiteBtnProps> = ({
       ref={btnRef}
       style={{
         borderColor: color,
-        color: textColor,
         transition: "0.3s ease-in-out",
         cursor: "pointer",
       }}
-      onMouseEnter={(e) => addColorsOnHover(e)}
-      onMouseLeave={(e) => removeColors(e)}
-      onTouchStart={(e) => addColorsOnHover(e)}
     >
       <a
         rel="noreferrer"
         href={link}
         style={{ textDecoration: "none", color: "inherit" }}
+        target="_blank"
       >
-        {text}
+        <div className="flexRow">
+          <span style={{ marginRight: "0.2rem", userSelect: "none" }}>
+            {text}
+          </span>
+          <BsArrowUpRight style={{ userSelect: "none" }} />
+        </div>
       </a>
     </button>
   );

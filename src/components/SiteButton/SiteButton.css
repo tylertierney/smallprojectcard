@@ -3,4 +3,16 @@
   border: 1px solid;
   border-radius: 1rem;
   padding: 0.5rem 0.7rem;
+  color: var(--custom-text-color);
+}
+
+.siteButton:hover {
+  background-color: var(--custom-color);
+  color: white;
+}
+
+.flexRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
