@@ -1,17 +1,18 @@
 {
-  "name": "@YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME",
+  "name": "@tylertierney/smallprojectcard",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/YOUR_REPOSITORY_NAME"
+    "registry": "https://npm.pkg.github.com/tylertierney"
   },
-  "version": "0.1.0",
-  "description": "A simple template for a custom React component library",
+  "author": "Tyler Tierney",
+  "version": "1.0.2",
+  "description": "A small card component used to display a project in a web dev portfolio.",
   "scripts": {
     "rollup": "rollup -c",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "author": "YOUR_NAME",
+  "author": "Tyler Tierney",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -26,16 +27,20 @@
     "@storybook/addon-links": "^6.3.12",
     "@storybook/react": "^6.3.12",
     "@testing-library/react": "^12.1.2",
-    "@types/jest": "^27.0.2",
-    "@types/react": "^17.0.34",
+    "@types/jest": "^27.0.3",
+    "@types/react": "^17.0.35",
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.3.1",
+    "postcss": "^8.1.0",
     "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "rollup": "^2.60.0",
     "rollup-plugin-dts": "^4.0.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.1",
+    "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.4.4"
   },
   "main": "dist/cjs/index.js",
@@ -43,5 +48,10 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "types": "dist/index.d.ts",
+  "dependencies": {}
 }

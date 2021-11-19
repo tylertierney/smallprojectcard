@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+.flexColumn {
+  display: flex;
+  direction: column;
+}
+
+.flexRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoCard {
+  top: 85%;
+}
+
+.projectCard:hover > .smallCardImage {
+  filter: brightness(70%);
+}
+
+.projectCard:hover > .infoCard {
+  top: 20%;
+}
