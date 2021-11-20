@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/tylertierney"
   },
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A small card component used to display a project in a web dev portfolio.",
   "scripts": {
     "rollup": "rollup -c",

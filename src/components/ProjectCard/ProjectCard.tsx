@@ -121,6 +121,12 @@ const SmallProjectCard: React.FC<SmallProjectProps> = ({
           {project.description}
         </div>
       </div>
+      <div
+        className="animatedBar"
+        style={{
+          backgroundColor: project.color,
+        }}
+      ></div>
     </div>
     // </div>
   );

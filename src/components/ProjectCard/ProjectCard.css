@@ -33,3 +33,17 @@
 .projectCard:hover > .infoCard {
   top: 20%;
 }
+
+.animatedBar {
+  height: 10px;
+  width: 110%;
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.projectCard:hover > .animatedBar {
+  left: 0%;
+}
